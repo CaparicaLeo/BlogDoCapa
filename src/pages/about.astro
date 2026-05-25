@@ -1,63 +1,156 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import profile from '../assets/profile.jpg';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={"about / " + SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<header class="page-header">
+					<h1>// about</h1>
+				</header>
+				<div class="about-content">
+					<div class="about-head">
+						<Image src={profile} alt="Leonardo Caparica" class="avatar" width={96} height={96} />
+						<div>
+							<p>
+								<strong>Leonardo Caparica</strong> &mdash; 21 anos, dev fullstack.
+							</p>
+							<ul class="quick-info">
+								<li>&#x1f4d6; CC na UNICENTRO</li>
+								<li>&#x1f4bb; Fullstack na Governize</li>
+								<li>&#x1f4e7; leobcalmeida@gmail.com</li>
+							</ul>
+						</div>
+					</div>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+					<p>
+						Caí de paraquedas na tecnologia — depois de uma experiência frustrada com concursos
+						públicos, descobri que meu lugar era outro. Mas olhando pra trás, faz todo sentido:
+						sempre fui fascinado por matemática, computadores e jogos. A computação só juntou
+						tudo isso num lugar só.
+					</p>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+					<p>
+						Estou no 4° ano de <strong>Ciência da Computação</strong> na
+						<a href="https://www.unicentro.br/" target="_blank">UNICENTRO</a>, Paraná, com
+						formatura prevista pro final de 2026. Desde junho de 2025, trabalho como
+						Desenvolvedor Web Fullstack na
+						<a href="https://governize.com.br" target="_blank">Governize</a>, onde arquitetei
+						e mantenho o <a href="https://app.startgovauto.com.br" target="_blank">StartGov</a>
+						— sistema de busca e prospecção de licitações governamentais com automações.
+					</p>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+					<p>
+						Gosto das duas pontas do desenvolvimento, mas o backend é meu xodó. Acredito que
+						é onde um produto ótimo se separa de um produto meia boca — é lá que mora a lógica,
+						a performance e a solidez de tudo. Trabalho principalmente com Laravel e estou
+						expandindo pro ecossistema PHP mais amplo, com Symfony no radar. DevOps também
+						entra na conta — acredito que desenvolvimento e infraestrutura andam de mãos dadas.
+					</p>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+					<p>
+						Fora do código, sou geek assumido: Marvel, Star Wars, Invincible, HQs, séries e
+						jogos fazem parte do dia a dia. E quando não estou na frente de um terminal, estou
+						fazendo música — tenho duas músicas autorais e sempre que dá rola um som com a galera.
+					</p>
+
+					<em>&ldquo;O avançado é o básico bem feito.&rdquo;</em>
+
+					<h2>stack</h2>
+					<ul>
+						<li><strong>Backend:</strong> Laravel, PHP, Symfony (estudando)</li>
+						<li><strong>Frontend:</strong> Vue.js, Blade</li>
+						<li><strong>Database:</strong> PostgreSQL, Redis</li>
+						<li><strong>DevOps &amp; Tools:</strong> Docker, Linux, Git</li>
+					</ul>
+
+					<h2>onde me encontrar</h2>
+				<ul>
+					<li><a href="mailto:leobcalmeida@gmail.com">Email</a></li>
+					<li><a href="https://github.com/CaparicaLeo">GitHub</a></li>
+					<li><a href="https://www.linkedin.com/in/leonardo-caparica/">LinkedIn</a></li>
+					<li><a href="https://open.spotify.com/intl-pt/artist/2SkRhZaFeJcBrFd1Z9TjqY">Se quiser escutar as minhas músicas.</a></li>
+				</ul>
+
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+	.page-header {
+		margin-bottom: 2.5em;
+		padding-bottom: 1.5em;
+		border-bottom: 1px solid var(--border);
+	}
+	.page-header h1 {
+		margin: 0;
+		font-size: 1.1em;
+		font-weight: 400;
+		color: var(--fg-dim);
+	}
+	.about-head {
+		display: flex;
+		align-items: center;
+		gap: 1.25em;
+		margin-bottom: 2em;
+	}
+	.about-head .avatar {
+		border-radius: 50%;
+		border: 2px solid var(--border);
+		flex-shrink: 0;
+	}
+	.about-head p {
+		margin: 0;
+		font-size: 1em;
+	}
+	.quick-info {
+		list-style: none;
+		padding: 0;
+		margin: 0.5em 0 0;
+		font-size: 0.85em;
+		color: var(--fg-dim);
+	}
+	.quick-info li {
+		margin-bottom: 0.15em;
+	}
+	.about-content p {
+		font-size: 0.95em;
+		line-height: 1.8;
+		margin-bottom: 1.25em;
+	}
+	.about-content em {
+		display: block;
+		font-size: 0.9em;
+		color: var(--fg-dim);
+		margin-bottom: 2em;
+	}
+	.about-content h2 {
+		font-size: 0.9em;
+		font-weight: 400;
+		color: var(--fg-dim);
+		margin-bottom: 0.75em;
+		margin-top: 2em;
+	}
+	.about-content ul:not(.quick-info) {
+		padding-left: 1.25em;
+		margin-bottom: 1.5em;
+	}
+	.about-content ul:not(.quick-info) li {
+		font-size: 0.95em;
+		line-height: 1.75;
+		margin-bottom: 0.25em;
+	}
+</style>

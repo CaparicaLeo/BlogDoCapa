@@ -1,0 +1,96 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+
+const projects = (await getCollection('projects'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={"projects / " + SITE_TITLE} description="Projetos de Leonardo Caparica" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1 class="page-title">// projects</h1>
+			<div class="projects-grid">
+				{
+					projects.map((project) => (
+						<a href={`/projects/${project.id}/`} class:list={['project-card', { featured: project.data.featured }]}>
+							<h2 class="project-name">{project.data.featured ? `⭐ ${project.data.title}` : project.data.title}</h2>
+							<p class="project-desc">{project.data.description}</p>
+							<div class="project-stack">
+								{project.data.stack.map((tech) => <span class="tech">{tech}</span>)}
+							</div>
+						</a>
+					))
+				}
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+	.page-title {
+		font-size: 0.9em;
+		color: var(--fg-dim);
+		font-weight: 400;
+		margin-bottom: 1.5em;
+	}
+	.projects-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1px;
+		background: var(--border);
+		border: 1px solid var(--border);
+	}
+	.project-card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75em;
+		padding: 1.25em;
+		background: var(--bg);
+		color: var(--fg);
+		text-decoration: none;
+		transition: background 0.15s;
+	}
+	.project-card:hover {
+		background: #0f0f0f;
+		text-decoration: none;
+	}
+	.project-name {
+		font-size: 1em;
+		font-weight: 700;
+		margin: 0;
+		color: var(--accent);
+	}
+	.project-desc {
+		font-family: var(--font-mono);
+		font-size: 0.85em;
+		color: var(--fg-dim);
+		margin: 0;
+		line-height: 1.5;
+	}
+	.project-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35em;
+		margin-top: auto;
+	}
+	.tech {
+		font-family: var(--font-mono);
+		font-size: 0.75em;
+		padding: 0.15em 0.5em;
+		border: 1px solid var(--border);
+		color: var(--fg-dim);
+	}
+
+	@media (max-width: 600px) {
+		.projects-grid { grid-template-columns: 1fr; }
+	}
+</style>
