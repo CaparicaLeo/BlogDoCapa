@@ -5,7 +5,7 @@ pubDate: 'May 24 2024'
 heroImage: '../../assets/blog-placeholder-1.jpg'
 ---
 
-Se você já passou mais de cinco minutos navegando pelo LinkedIn ou por comunidades de programação, com certeza já esbarrou no termo **Full-Stack**. Ele aparece em descrições de vagas, cursos que prometem milagres em 6 meses e bios de desenvolvedores por aí. 
+Se você já passou mais de cinco minutos navegando pelo LinkedIn ou por comunidades de programação, com certeza já esbarrou no termo **Full-Stack**. Ele aparece em descrições de vagas, cursos que prometem milagres em 6 meses e bios de desenvolvedores por aí (Tipo eu kkkkkkk). 
 
 Mas pare para pensar: **será que o Dev Full-Stack realmente existe, ou estamos correndo atrás de um unicórnio mitológico?**
 
