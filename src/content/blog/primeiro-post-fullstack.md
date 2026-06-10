@@ -1,7 +1,7 @@
 ---
 title: 'Primeiro Post - Existe Dev FullStack?'
 description: 'Uma reflexão sincera sobre o mito, a realidade e os desafios de atuar nas duas frentes do desenvolvimento de software.'
-pubDate: 'May 24 2024'
+pubDate: 'May 24 2026'
 heroImage: '../../assets/blog-placeholder-1.jpg'
 ---
 
