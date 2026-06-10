@@ -1,7 +1,7 @@
 ---
 title: 'Git Flow — O Mapa que Todo Dev Precisa Conhecer'
 description: 'Uma explicação direta sobre a estratégia de branches que organiza (e salva) times de desenvolvimento no mundo real.'
-pubDate: 'Jun 10 2025'
+pubDate: 'Jun 10 2026'
 heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
 
